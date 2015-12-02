@@ -33,6 +33,11 @@ span.info-badge {
   top: -34px;
 }
 
+nav.stock {
+  background-color: pink ;
+}
+
+
 div#item_regist {  
     position: fixed !important;  
     position: absolute;
