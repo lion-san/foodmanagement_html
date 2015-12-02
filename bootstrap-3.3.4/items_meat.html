@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>items</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery Mobile -->
+    <!--link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /-->
+
+   <!-- site css -->
+    <link rel="stylesheet" href="css/site.min.css">
+
+   <!-- mystyle css -->
+    <link rel="stylesheet" href="css/mystyle.css">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- jQuery Mobile -->
+    <!--script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script-->
+    
+    <!-- items.js -->
+    <script src="js/items.js"></script>
+
+    <!-- popovar -->
+    <script>
+      $(function() {
+        $('[rel=popover]').popover(
+          {
+            html : true, 
+            content: function() {
+              return $('#information').html();
+            }/*,
+            title: function() {
+              return $('#popoverExampleTwoHiddenTitle').html();
+            }*/
+          }
+        );
+      });
+    </script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+
+  </head>
+  <body>
+
+  <!--Popover Information -->
+  <div id="information" style="display: none">
+  <div class="list-group">
+    <a href="./comment_all_users.html" class="list-group-item">
+      <p class="list-group-item-text">セネルさんより、メッセージがあります。</p>
+    </a>
+    <a href="./comment_all_users.html" class="list-group-item">
+      <p class="list-group-item-text">わんわんさんより、メッセージがあります。</p>
+    </a>
+    <a href="./buyer_review.html" class="list-group-item">
+      <p class="list-group-item-text">商品受け取り後の、評価をお願いします。</p>
+    </a>
+    </div>
+  </div>
+
+<div class="container">
+   
+   
+  
+  <div class="row">
+
+    <!-- Navibar -->
+              <div class="col-md-12">
+                <nav class="navbar navbar-default" role="navigation">
+                  <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">
+                        <img style="max-width:100px; margin-top: -14px;" class="img-logo" src="images/touch-icon.png" alt="">
+                      </a>
+
+
+                      <p class="navbar-text">
+                        <a href="javascript:void(0);" data-toggle="popover" title="お知らせ" rel="popover"                          
+                          data-html="true" data-placement="bottom">
+                            <span class="glyphicon glyphicon-send info" aria-hidden="false"></span>
+                        </a>
+                        <span class="my-badge badge badge-danger">222</span>
+                      </p>
+
+
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a class="nav-link" href="#">食品管理</a></li>
+                        <li class=""><a class="nav-link" href="#">整理</a></li>
+                        <li class=""><a class="nav-link" href="#">チラシ</a></li>
+                        <li class="disabled"><a class="nav-link" href="#">レシピ</a></li>
+                        <li>
+                          <form class="navbar-form navbar-right" role="search">
+                            <div class="form-search search-only">
+                            <i class="search-icon glyphicon glyphicon-search"></i>
+                            <input type="text" class="form-control search-query">
+                            </div>
+                          </form>
+                        </li>
+                      </ul>
+                   </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container-fluid -->
+                </nav>
+              </div>
+
+              <div class="col-md-12">
+                <ul id="myTab2" class="view-mode nav nav-pills nav-justified">
+                  <li><a href="items.html">すべて <span class="badge pull-right">46</span></a></li>
+                  <li><a href="items_sort.html">賞味期限順<span class="badge badge-success pull-right">20</span></a></li>
+                  <li class="active"><a href="items_meat.html">肉<span class="badge badge-success pull-right">3</span></a></li>
+                  <li><a href="items_vegetable.html">野菜<span class="badge badge-success pull-right">7</span></a></li>
+                  <li><a href="items_drink.html">飲料<span class="badge badge-success pull-right">6</span></a></li>
+                  <li><a href="items_longtail.html">調味料<span class="badge badge-success pull-right">10</span></a></li>
+                </ul>
+              </div>
+
+    <!-- thumbnail -->
+            <div class="col-xs-6 col-md-3">
+              <div class="thumbnail">
+                <span class="col-xs-12 col-md-12 label label-info">消費期限:2015/12/05</span>
+                <span class="col-xs-12 col-md-12 label label-default">購入日:2015/12/02</span>
+                <a href="./item_info.html"><img class="img-rounded" src="images/ingradients/s_meat.jpg"></a>
+                <div class="infos">
+                  <h4>山形豚　切り落とし</h4>
+                  <div class="glyphicon glyphicon-star"></div>123 
+                  <div class="glyphicon glyphicon-pencil"></div>456 
+                  <div class="price">&yen;276</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="thumbnail">
+                <span class="col-xs-12 col-md-12 label label-info">消費期限:2015/12/05</span>
+                <span class="col-xs-12 col-md-12 label label-default">購入日:2015/12/02</span>
+                <a href="./item_info.html"><img class="img-rounded" src="images/ingradients/s_meat.jpg"></a>
+                <div class="infos">
+                  <h4>国産牛　カレー用</h4>
+                  <div class="glyphicon glyphicon-star"></div>123 
+                  <div class="glyphicon glyphicon-pencil"></div>456 
+                  <div class="price">&yen;276</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="thumbnail">
+                <span class="col-xs-12 col-md-12 label label-info">消費期限:2015/12/05</span>
+                <span class="col-xs-12 col-md-12 label label-default">購入日:2015/12/02</span>
+                <a href="./item_info.html"><img class="img-rounded" src="images/ingradients/s_meat.jpg"></a>
+                <div class="infos">
+                  <h4>豚バラ肉</h4>
+                  <div class="glyphicon glyphicon-star"></div>123 
+                  <div class="glyphicon glyphicon-pencil"></div>456 
+                  <div class="price">&yen;276</div>
+                </div>
+              </div>
+            </div>
+
+
+    <!-- thumbnail end -->
+
+  </div><!-- row -->
+</div><!-- container -->
+  </body>
+</html>
