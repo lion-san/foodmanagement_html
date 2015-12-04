@@ -37,6 +37,13 @@ nav.stock {
   background-color: pink ;
 }
 
+nav.maintenance {
+  background-color: #FFCE54 ;
+}
+
+nav.measure {
+  background-color: #FC6E51 ;
+}
 
 div#item_regist {  
     position: fixed !important;  
